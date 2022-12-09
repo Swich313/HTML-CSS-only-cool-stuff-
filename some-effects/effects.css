@@ -46,11 +46,11 @@ input:not(:placeholder-shown) + input[type="submit"] {
 
 }
 
-button {
+.counter {
     position: relative;
 }
 
-button::before {
+.counter::before {
     content: attr(data-count);
     position: absolute;
     top: -0.75em;
@@ -63,4 +63,39 @@ button::before {
     border-radius: 50%;
     background-color: red;
     color: white;
+}
+
+.hover_effect{
+    padding: 1.2rem 2.5rem;
+    background-color: royalblue;
+    color: yellow;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 2;
+    cursor: pointer;
+    position: relative;
+}
+
+.hover_effect::before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    background-color: black;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.hover_effect:hover::before {
+    height: 500%;
+    color: red;
+}
+.hover_effect:hover {
+    color: red;
+    transition: all 0.3s ease;
 }

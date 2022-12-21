@@ -77,3 +77,8 @@ h2, p {
 .cutoff-text:has(+ .expand-btn:checked){
     max-height: none;
 }
+
+.highlighted {
+    background-color: #f166ef;
+    font-weight: bold;
+}
